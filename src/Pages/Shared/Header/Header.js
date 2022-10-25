@@ -3,10 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import b123 from '../../../Assets/Brand/b123.png'
+import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" className='header'>
             <Container>
                 <Navbar.Brand href="#home">
                     <img
@@ -21,15 +23,12 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Courses</Nav.Link>
-                        <Nav.Link href="#pricing">Blog</Nav.Link>
-                        <Nav.Link href="#pricing">FAQ</Nav.Link>
+                        <Nav.Link><Link to='/courses' className='header'>Courses</Link></Nav.Link>
+                        <Nav.Link><Link to='/blog'>Blog</Link></Nav.Link>
+                        <Nav.Link><Link to='/faq'>FAQ</Link></Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">Log In</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link>
+                        <Nav.Link><Link to='/login'>Log In</Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
