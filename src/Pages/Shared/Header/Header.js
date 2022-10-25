@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import b123 from '../../../Assets/Brand/b123.png'
 
 const Header = () => {
     return (
@@ -10,7 +10,7 @@ const Header = () => {
             <Container>
                 <Navbar.Brand href="#home">
                     <img
-                        src="src\Assets\Brand\123.png"
+                        src={b123}
                         width="50"
                         height="50"
                         className="d-inline-block align-top"
