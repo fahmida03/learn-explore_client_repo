@@ -1,7 +1,4 @@
-.head a{
+.container a{
     text-decoration: none;
     color: white;
-}
-.head a:hover{
-    color: yellow;
 }
