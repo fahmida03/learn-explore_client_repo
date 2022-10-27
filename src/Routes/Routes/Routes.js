@@ -33,13 +33,13 @@ export const routes = createBrowserRouter([
                     {
                         path: '/courses/:id',
                         element: <LeftSide></LeftSide>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/all-courses/${params.id}`)
+                        loader: ({ params }) => fetch(`https://learn-and-explore-server.vercel.app/all-courses/${params.id}`)
                     }
                 ]
             },
             {
                 path: '/course/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/per-courses/${params.id}`),
+                loader: ({ params }) => fetch(`https://learn-and-explore-server.vercel.app/per-courses/${params.id}`),
                 element: <PerCourse></PerCourse>
             },
             {

@@ -4,11 +4,11 @@ import './LeftSide.css'
 
 const LeftSide = () => {
     const [courses, setCourses] = useState([])
-    useEffect(()=>{
-        fetch('http://localhost:5000/all-courses')
-        .then(res => res.json())
-        .then(data => setCourses(data))
-    },[])
+    useEffect(() => {
+        fetch('https://learn-and-explore-server.vercel.app/all-courses')
+            .then(res => res.json())
+            .then(data => setCourses(data))
+    }, [])
     return (
         <div className='leftside'>
             <h3>Courses</h3>
