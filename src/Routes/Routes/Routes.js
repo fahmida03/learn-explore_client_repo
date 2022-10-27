@@ -39,8 +39,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/course/:id',
-                element: <PerCourse></PerCourse>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/per-courses/${params.id}`),
+                element: <PerCourse></PerCourse>
             },
             {
                 path: '/blog',
@@ -54,6 +54,10 @@ export const routes = createBrowserRouter([
                 path: '/login',
                 element: <Login></Login>
 
+            },
+            {
+                path: '*', 
+                element: <div>This Route is not found </div>
             }
 
         ]

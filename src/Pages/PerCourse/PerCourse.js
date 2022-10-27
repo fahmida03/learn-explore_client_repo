@@ -4,12 +4,13 @@ import CourseDetails from '../CourseDetails/CourseDetails';
 
 const PerCourse = () => {
     const courses = useLoaderData();
+    console.log(courses)
     return (
         <div>
             <h2>vbfbb</h2>
             {
                 courses.map(course => <CourseDetails
-                    key={course.course_id}
+                    key={course.id}
                     course = {course}
                     ></CourseDetails>)
             }

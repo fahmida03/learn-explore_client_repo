@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import b123 from '../../../Assets/Brand/b123.png'
 import { Link } from 'react-router-dom';
 import './Header.css'
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Header = () => {
+    // const { providerLogin } = useContext(AuthContext)
+
+    // const googleProvider = new GoogleAuthProvider()
+
+    // const handleGoogleSignIn = () => {
+    //     providerLogin(googleProvider)
+    //         .then(result => {
+    //             const user = result.user;
+    //             console.log(user);
+    //         })
+    //         .catch(error => console.error(error))
+    // }
+    // const { user } = useContext(AuthContext)
     return (
         <div className='head'>
             <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" className='header'>
@@ -30,7 +45,8 @@ const Header = () => {
                             <Nav.Link><Link to='/faq'>FAQ</Link></Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link><Link to='/login'>Log In</Link></Nav.Link>
+                            <Nav.Link><Link to='/login' >Log In</Link></Nav.Link>
+                            <Nav.Link><Link to='/login'></Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
