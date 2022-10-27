@@ -9,7 +9,7 @@ const CourseCard = ({ course }) => {
     return (
         <div className='container'>
             <div className='m-4'>
-                <Card style={{ width: '30rem' }}>
+                <Card className='shadow' style={{ width: '30rem' }}>
                     <Card.Img variant="top" src={course.image} />
                     <Card.Body>
                         <Card.Title>{course.title}</Card.Title>
@@ -21,7 +21,7 @@ const CourseCard = ({ course }) => {
                             <p className='fw-bold'>Lecture: {course.lectures.lecture}</p>
                         </div>
                         <p className='text-center fw-bold'>Skill Level: {course.skill_level}</p>
-                        <Button className='btn btn-lg' variant="success"><Link to={`/course/${course.id}`}>Details</Link></Button>
+
                     </Card.Body>
                 </Card>
             </div>

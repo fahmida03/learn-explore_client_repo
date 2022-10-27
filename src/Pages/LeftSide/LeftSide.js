@@ -16,7 +16,7 @@ const LeftSide = () => {
             {
                 courses.map(course => <p
                     key={course.id}>
-                    <Link to={`/course/${course.id}`}>
+                    <Link to={`/per-courses/${course.id}`}>
                         {course.name} </Link></p>)
             }
         </div>
